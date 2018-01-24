@@ -126,7 +126,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# for heroku 
+# for heroku
 import dj_database_url
 db_from_env = dj_database_url_config()
-DATABASE['default'].update(db_from_env)
+DATABASES['default'].update(db_from_env)

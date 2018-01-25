@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .forms import UserSignup, UserLogin, UserForm, RestaurantForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 def home(request):
     return render(request, 'home.html', {})
@@ -27,7 +28,7 @@ def restaurant_signup(request):
                 password = user_form.cleaned_data['password'],
             ))
             return redirect("taxi:restaurant_home")
-            
+
     context = {
         "user_form": user_form,
         "restaurant_form": restaurant_form,

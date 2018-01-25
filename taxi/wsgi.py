@@ -16,5 +16,5 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "taxi.settings")
 application = get_wsgi_application()
 
 #use whitenoise paclage to serve static files on heroku
-from whitnoise.django import DjangoWhiteNoise
+from whitenoise.django import DjangoWhiteNoise
 application = DjangoWhiteNoise(application)
